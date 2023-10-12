@@ -1,0 +1,20 @@
+.card-1{
+    background-color: #4dbd74;
+    box-shadow: 0px 10px 10px 0px rgba(0, 0, 0, 0.1);
+    color: white;
+}
+.card-2{
+    background-color:#f86c6b;
+    box-shadow: 0px 10px 10px 0px rgba(0, 0, 0, 0.1);
+    color: white;
+}
+.card-3{
+    background-color: #ffcccc;
+    box-shadow: 0px 10px 10px 0px rgba(0, 0, 0, 0.1);
+    color: #000;
+}
+.card-4{
+    background-color: #f4f7db;
+    box-shadow: 0px 10px 10px 0px rgba(0, 0, 0, 0.1);
+    color: w#000;
+}

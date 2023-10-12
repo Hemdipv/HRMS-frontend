@@ -1,0 +1,9 @@
+tbody tr, td,th{
+    border: 1px solid black;
+}
+.table{
+    text-align: center;
+}
+.serch-td{
+    text-align:end !important;
+}

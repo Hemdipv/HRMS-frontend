@@ -1,0 +1,37 @@
+<div class="container">
+    <div class="card">
+        <h2 class="text-center">Login</h2>
+        <form [formGroup]="registerForm" (ngSubmit)="onSubmit()">
+            <input type="email" placeholder="email" formControlName="email">
+            <span class="text-danger" *ngIf="!registerForm.controls['email'].valid && !registerForm.valid && submitted">Please Enter Valid Email</span>
+            
+            <!-- Password input field with button -->
+            <div class="password-input-container">
+                <input [type]="show ? 'text' : 'password'" placeholder="Password" formControlName="password">
+                <button type="button" (click)="onClick()" class="show-password-button">
+                    <i class="fa fa-eye" aria-hidden="true" *ngIf="!show"></i>
+                    <i class="fa fa-eye-slash" aria-hidden="true" *ngIf="show"></i>
+                </button>
+            </div>
+            
+            <span class="text-danger" *ngIf="!registerForm.controls['password'].valid && !registerForm.valid && submitted">Please Enter Valid password</span>
+            <div class="buttons">
+                <button type="submit" class="login-button mt-3">Login</button>
+            </div>
+        </form>
+    </div>
+</div>
+
+
+
+<!-- <section>
+    <div class="example-label">Basic</div>
+    <div class="example-button-row">
+      <button mat-button>Basic</button>
+      <button mat-button color="primary">Primary</button>
+      <button mat-button color="accent">Accent</button>
+      <button mat-button color="warn">Warn</button>
+      <button mat-button disabled>Disabled</button>
+      <a mat-button href="https://www.google.com/" target="_blank">Link</a>
+    </div>
+  </section> -->

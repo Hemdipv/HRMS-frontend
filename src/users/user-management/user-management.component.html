@@ -1,0 +1,36 @@
+<div class="container">
+    <div class="card">
+        <h2 class="text-center">Create User</h2>
+        <form [formGroup]="registerForm" (ngSubmit)="onSubmit()">
+            <input type="text" placeholder="User Name" formControlName="userName">
+            <small class="text-danger" *ngIf="!registerForm.controls['userName'].valid && !registerForm.valid && submitted">Please Enter User Name</small>
+            <input type="email" placeholder="Email" formControlName="email">
+            <small class="text-danger" *ngIf="!registerForm.controls['email'].valid && !registerForm.valid && submitted">Please Enter Valid Email</small>
+            
+            <!-- Password input field with button -->
+            <div class="password-input-container">
+                <input [type]="show ? 'text' : 'password'" placeholder="Password" formControlName="password">
+                <button type="button" (click)="onClick()" class="show-password-button">
+                    <i class="fa fa-eye" aria-hidden="true" *ngIf="!show"></i>
+                    <i class="fa fa-eye-slash" aria-hidden="true" *ngIf="show"></i>
+                </button>
+            </div>
+            <small class="text-danger" *ngIf="!registerForm.controls['password'].valid && !registerForm.valid && submitted">Please Enter Valid Password</small>
+
+                        <!-- Password input field with button -->
+                        <div class="password-input-container">
+                            <input [type]="confirmShow ? 'text' : 'password'"    placeholder="Confirm Password" formControlName="confirmPassword">
+                            <!-- <input [type]="confirmShow ? 'text' : 'confirmPassword'" placeholder="Confirm Password" formControlName="confirmPassword"> -->
+                            <button type="button" (click)="confirmOnClick()" class="show-password-button">
+                                <i class="fa fa-eye" aria-hidden="true" *ngIf="!confirmShow"></i>
+                                <i class="fa fa-eye-slash" aria-hidden="true" *ngIf="confirmShow"></i>
+                            </button>
+                        </div>
+                        
+                        <small class="text-danger" *ngIf="!registerForm.controls['confirmPassword'].valid && !registerForm.valid && submitted">Please Enter Valid Confirm Password</small>
+            <div class="buttons">
+                <button type="submit" class="login-button mt-3">Create</button>
+            </div>
+        </form>
+    </div>
+</div>
